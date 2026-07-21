@@ -7,6 +7,14 @@ The collection follows the open [Agent Skills](https://agentskills.io/home) form
 
 Below separates meta-level procedures that shape agent work from adapters for a specific capability.
 
+## Validate
+
+Validate every published skill against the Agent Skills specification:
+
+```bash
+gh skill publish --dry-run
+```
+
 ## Agent workflow skills
 
 These meta-level skills govern how an agent reasons about and structures its work across repositories.
