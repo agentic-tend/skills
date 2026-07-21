@@ -15,6 +15,6 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate Agent Skills
         run: gh skill publish --dry-run
