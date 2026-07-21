@@ -1,0 +1,20 @@
+# Validate the repository's top-level skills against the Agent Skills specification.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Agent Skills
+        run: gh skill publish --dry-run
