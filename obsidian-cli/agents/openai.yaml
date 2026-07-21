@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian CLI"
+  short_description: "Query and operate Obsidian indexed state safely"
+  default_prompt: "Use $obsidian-cli to inspect this vault through Obsidian indexed state."
