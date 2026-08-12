@@ -1,0 +1,7 @@
+interface:
+  display_name: "Bootstrap Project Context"
+  short_description: "Derive evidence-backed repository agent context"
+  default_prompt: "Use $bootstrap-project-context to inspect this repository and apply only the persistent agent context its actual structure requires."
+
+policy:
+  allow_implicit_invocation: true

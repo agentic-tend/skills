@@ -1,6 +1,7 @@
 ---
 name: obsidian-cli
-description: Use the Obsidian CLI when a task depends on Obsidian's indexed notes, links, properties, Bases, or application state; when an approved rename or move should update Obsidian-managed links; or when the user explicitly asks to use `obsidian`. Do not trigger for ordinary filesystem inspection, Markdown or YAML editing, or Git work that does not require Obsidian semantics. Plugin and theme development belongs in a separate skill.
+description: Use the Obsidian CLI when a task depends on Obsidian's index or running application state, such as resolved links or properties, Bases, or link-preserving moves. Do not use it for ordinary filesystem inspection, Markdown or YAML editing, Git work, or plugin and theme development that does not need Obsidian runtime semantics.
+license: MIT. See LICENSE.txt for complete terms and notices
 ---
 
 # Obsidian CLI
@@ -10,7 +11,7 @@ Use the CLI as an adapter to a running Obsidian application when its index or ap
 ## Select the interface
 
 - Use filesystem tools for ordinary file inspection and exact Markdown or YAML edits.
-- Use the CLI for Obsidian-resolved files, links, backlinks, properties, Bases, search, outline, tasks, or application state.
+- Use the CLI when Obsidian-resolved links or properties, Bases, or running application state are the relevant source of truth.
 - Use `move` or `rename` when an approved operation must update Obsidian-managed internal links.
 - Do not use this skill for plugin or theme development and debugging.
 
