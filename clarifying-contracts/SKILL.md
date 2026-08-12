@@ -1,6 +1,7 @@
 ---
 name: clarifying-contracts
 description: Use when a task, plan, or proposed change has unresolved user-owned choices about purpose, direct object, public behavior, constraints, invariants, scope, decision authority, or acceptance evidence; or when the user asks to clarify or stress-test such a contract before action.
+license: MIT. See LICENSE.txt for complete terms and notices
 ---
 
 # Clarifying Contracts
@@ -11,12 +12,12 @@ Reduce essential ambiguity. Establish why and the observable contract before imp
 
 A contract may define:
 
-- purpose — why the change is needed;
-- direct object and public outcome — what must change, including failure behavior when relevant;
-- constraints and invariants — what limits the solution and what must remain true;
-- scope and non-goals — what is and is not authorized;
-- decision authority — who owns unresolved choices;
-- acceptance evidence — how completion can be checked, including thresholds or external oracles when relevant.
+- purpose: why the change is needed;
+- direct object and public outcome: what must change, including failure behavior when relevant;
+- constraints and invariants: what limits the solution and what must remain true;
+- scope and non-goals: what is and is not authorized;
+- decision authority: who owns unresolved choices;
+- acceptance evidence: how completion can be checked, including thresholds or external oracles when relevant.
 
 Include only fields that affect the task. Do not turn this list into a mandatory template.
 

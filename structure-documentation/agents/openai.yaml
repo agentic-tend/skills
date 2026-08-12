@@ -1,0 +1,7 @@
+interface:
+  display_name: "Structure Documentation"
+  short_description: "Structure durable prose for semantic readers"
+  default_prompt: "Use $structure-documentation to structure and edit this project's persistent prose consistently."
+
+policy:
+  allow_implicit_invocation: true
