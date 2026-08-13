@@ -20,6 +20,7 @@ Correct behavior supplies the observable baseline for later simplification and o
   - If the requested scope is over-designed, surface the simpler route before implementation.
 - Add an abstraction only when a repeated concrete use, an explicit contract boundary, or demonstrated pressure requires it.
 - State the difficulty an abstraction removes and the assumption, cost, or trade-off it introduces.
+- Treat defensive checks, fallback behavior, conversions, new exception guarantees, and theoretically safer arithmetic as behavior, not free robustness. Add them only when the active contract, a reachable failure, or measured pressure requires them.
 
 ## Redesign gate
 
