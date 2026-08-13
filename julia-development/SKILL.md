@@ -25,6 +25,12 @@ Inspect the relevant section rather than treating a page title as an answer. Exp
 
 If official documentation cannot be reached, proceed only from project source, tests, and installed-version evidence. State that official verification remains incomplete; do not invent missing Julia semantics.
 
+## Select a feedback surface
+
+Read [feedback surfaces](references/feedback-surfaces.md) when implementation behavior is uncertain, an error or test does not identify its cause, performance evidence needs interpretation, platform or backend state may change the result, or a proposed safeguard extends the established contract.
+
+Record the Julia version and relevant platform, dependency, and backend state before interpreting feedback. Choose the smallest official or executable surface that can distinguish the live hypotheses, and preserve the raw result. Treat a passing test, red `@code_warntype` output, requested thread count, or tool result as an observation rather than a Julia rule.
+
 ## Escalate performance deliberately
 
 Enter performance diagnosis only when the user requests performance work, the change touches a known hot path, measurements show allocation, type-instability, or regression, or the change makes a new performance promise.
@@ -35,4 +41,4 @@ When that pressure exists, consult the official [Performance Tips](https://docs.
 
 Treat external community skills as scenario and failure-mode discovery, not Julia authority. Do not copy their rules into this skill.
 
-Add persistent Julia guidance only after route-only behavior repeats the same failure in independent scenarios and a minimal candidate, grounded in an official Julia section, fixes a sealed holdout without regressing other suites. A route-only result with no distilled rule is valid.
+Process guidance explicitly chosen by the maintainer may be persisted directly. Add a Julia semantic or performance conclusion only after route-only behavior repeats the same failure in independent scenarios and a minimal candidate, grounded in an official Julia section, fixes a sealed holdout without regressing other suites. A route-only result with no distilled language rule is valid.
