@@ -22,6 +22,8 @@ Read [testing](references/testing.md) when behavior or acceptance evidence chang
 
 Read [delivery](references/delivery.md) before handing completed work back or preparing requested delivery prose. Keep local technical evidence separate from authority for external action.
 
+Read [feedback](references/feedback.md) when a result is surprising, the cause or oracle is uncertain, the work needs iterative diagnosis or measurement, or a proposed guardrail extends beyond the established contract. Use feedback to discriminate among hypotheses, not to justify additional behavior by default.
+
 ## 3. Compose with other skills
 
 - Load and follow `$structure-documentation` whenever the task changes persistent natural-language content, including prose spans inside code or interfaces.
