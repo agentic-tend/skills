@@ -29,3 +29,5 @@ Write tests against the public boundary before relying on internals. If a test m
 An implementation must not change expected results, acceptance thresholds, or external oracles merely to make itself pass.
 
 When an oracle is wrong, establish independent evidence and change the contract explicitly rather than treating implementation disagreement as sufficient proof.
+
+A passing test establishes agreement with its oracle, not that the oracle or surrounding claim is correct. Calibrate proxies and automated graders against executable evidence or human judgment, record the scope of the observed result, and add confirmed failures to the regression set.
