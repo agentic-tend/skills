@@ -28,6 +28,7 @@ These skills provide reusable procedures with a distinct task outcome.
 
 These skills realize cross-domain epistemic preferences for a particular kind of work.
 
+- [Julia Development](julia-development/SKILL.md) routes Julia implementation, review, and evidence-triggered performance work through project facts and version-compatible official Julia semantics.
 - [Software Engineering](software-engineering/SKILL.md) applies the user's preferred method when software behavior, structure, acceptance evidence, or delivery is the task's direct object.
 - [Structure Documentation](structure-documentation/SKILL.md) structures durable, intentionally authored natural language for human, agent, or mixed semantic readers.
 
