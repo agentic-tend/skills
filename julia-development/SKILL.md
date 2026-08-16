@@ -2,7 +2,6 @@
 name: julia-development
 description: Develop, refactor, review, or diagnose Julia code using the target project's contracts and version-compatible official Julia documentation. Use for any Julia implementation or code review, and for performance work when the user requests it or evidence identifies a hot path, allocation, type-instability, benchmark regression, threading issue, or new performance promise.
 ---
-
 # Julia Development
 
 Reconstruct Julia behavior from project evidence and Julia's own semantics. Do not fill uncertainty with habits from Python, MATLAB, or another language that looks similar.
@@ -24,6 +23,19 @@ Use the official manual as the authority instead of relying on remembered langua
 Inspect the relevant section rather than treating a page title as an answer. Explain which project fact and official behavior support the implementation decision.
 
 If official documentation cannot be reached, proceed only from project source, tests, and installed-version evidence. State that official verification remains incomplete; do not invent missing Julia semantics.
+
+## Express Julia-native concepts
+
+Prefer [direct Unicode Greek identifiers](https://docs.julialang.org/en/v1/manual/variables/) instead of its transliterated ASCII names (e.g., using β instead of beta).
+
+Represent a concept with the least structure that preserves its semantics.
+
+- verb: Use a generic function when the concept is fundamentally an operation, and variation belongs to the types of its arguments.
+- verb with local memory: Use a closure when the concept is still fundamentally an operation, but its behavior depends on local captured context that has no independent domain identity.
+- verb with state: Use a callable object when the operation itself has persistent, inspectable state or lifecycle, so that the transformation deserves an identity of its own.
+- noun: Use an ordinary data object with external operations when the object represents a domain entity that admits several equally meaningful behaviors; do not arbitrarily elevate one verb into the object's identity.
+
+Julia permits arbitrary objects to be callable, but that mechanism alone does not justify a callable struct. Let the project contract and the object's semantic role choose among these forms; do not impose a rigid checklist or introduce a bespoke container merely to shorten an argument list. See the official [function-like object](https://docs.julialang.org/en/v1/manual/methods/#Function-like-objects) semantics when the distinction matters.
 
 ## Select a feedback surface
 
