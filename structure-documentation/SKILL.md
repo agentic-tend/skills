@@ -43,10 +43,10 @@ Wrong: 这是一个 contract，it changes behavior。
 Wrong: Use the public API( not the private helper )for validation.
 ```
 
-## 4. Apply artifact conventions
+## 4. Specialize by artifact
 
-Read [documentation conventions](references/documentation.md) for file contracts, navigation syntax, physical-line behavior, disclosures, public/private promotion, and the Markdown logical-block counter.
+Apply the universal rules above before artifact-specific conventions. When the target is standalone project documentation, read [documentation artifact conventions](references/artifact-documentation.md). Do not apply an artifact reference to prose outside that artifact boundary.
 
-## 5. Verify the artifact
+## 5. Verify the prose
 
-Review by semantic block and reading path rather than isolated physical lines. Check the applicable links, hierarchy, examples, public wording, and repository-specific validation. Confirm that mixed-task prose follows the same rules as standalone prose and that exempt material was not rewritten.
+Review by semantic block and reading path rather than isolated physical lines. Check the hierarchy, examples, wording, and reader's next action. When an artifact reference applies, run its validation. Confirm that mixed-task prose follows the same rules as standalone prose and that exempt material was not rewritten.
