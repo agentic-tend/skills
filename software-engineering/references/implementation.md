@@ -6,13 +6,23 @@ This reference defines how implementation topology evolves from an established c
 
 Treat structure and behavior as coupled axes:
 
-- Vertical evolution establishes the smallest coherent skeleton and public topology before local semantics when a task creates or changes that topology. It does not require empty scaffolding for a local correction.
+- Vertical evolution establishes the smallest coherent skeleton and public topology when a task creates or changes that topology. At a lifecycle boundary whose contract is not inferable from the surrounding code, decide whether a concise contract docstring is needed to preserve inputs, mutations or outputs, and ordering invariants. Establish these boundaries early enough to guide the implementation, but interleave topology, local semantics, prose, and evidence when the task benefits; do not require empty scaffolding or a fixed authoring sequence for a local correction.
 - Horizontal evolution follows the "make it work, make it right, make it fast" sequence[^three-m]:
   1. write the smallest plain-code implementation that satisfies the contract;
   2. simplify the working code and align its units with the declared topology;
   3. optimize only against explicit performance evidence and a relevant benchmark.
 
+During horizontal evolution, add motivation comments only at non-obvious state transitions where removing the comment would create a logical gap. Explain why the transition is necessary without narrating the code. Software engineering owns this semantic decision; prose and language capabilities own expression and host syntax once the need is established.
+
 Correct behavior supplies the observable baseline for later simplification and optimization.
+
+## Return edges
+
+A return value establishes a caller-visible data-flow and API edge; exposing a value already available inside the implementation is not contract-free.
+
+- Establish that edge only for an independently meaningful result, an intentional composition or output-buffer contract, an external protocol, or an existing public contract.
+- When the caller already holds the mutation target and the operation has only an effect, do not manufacture a target-alias return without one of those contracts.
+- Preserve an existing public return contract unless the approved task includes its API migration.
 
 ## Complexity boundary
 

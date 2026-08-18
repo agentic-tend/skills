@@ -188,7 +188,7 @@ def count_logical_blocks(text: str) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Report Markdown logical blocks for structure review."
+        description="Report Markdown logical-block review evidence."
     )
     parser.add_argument("paths", nargs="+", type=Path, metavar="PATH")
     parser.add_argument(
@@ -216,8 +216,13 @@ def main(argv: Sequence[str] | None = None) -> int:
         reports.append((path, count_logical_blocks(text)))
 
     for path, blocks in reports:
-        if blocks > args.threshold:
-            status = f"review recommended; {blocks - args.threshold} over threshold"
+        if blocks >= args.threshold:
+            overage = blocks - args.threshold
+            status = (
+                "review recommended; at threshold"
+                if overage == 0
+                else f"review recommended; {overage} over threshold"
+            )
         else:
             status = "within review threshold"
         print(
