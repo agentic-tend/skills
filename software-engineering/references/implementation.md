@@ -16,6 +16,14 @@ During horizontal evolution, add motivation comments only at non-obvious state t
 
 Correct behavior supplies the observable baseline for later simplification and optimization.
 
+## Return edges
+
+A return value establishes a caller-visible data-flow and API edge; exposing a value already available inside the implementation is not contract-free.
+
+- Establish that edge only for an independently meaningful result, an intentional composition or output-buffer contract, an external protocol, or an existing public contract.
+- When the caller already holds the mutation target and the operation has only an effect, do not manufacture a target-alias return without one of those contracts.
+- Preserve an existing public return contract unless the approved task includes its API migration.
+
 ## Complexity boundary
 
 - Follow the KISS principle[^kiss]: prefer the smallest conceptual diff that satisfies the contract.
