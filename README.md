@@ -2,7 +2,7 @@
 
 This repository owns Agentic Tend's reusable skills layer, dogfooded in Codex before publication.
 
-Each top-level skill directory is independently discoverable through its `SKILL.md` entrypoint. The collection follows the open [Agent Skills](https://agentskills.io/home) format: compatible agents discover concise metadata first and load full instructions and bundled resources only when task traits match. Agentic Tend's [agentic tooling model](https://github.com/agentic-tend/.github/blob/main/docs/agentic-tooling.md) owns the primitive ontology, its [context ownership model](https://github.com/agentic-tend/.github/blob/main/docs/context-ownership.md) owns placement and activation boundaries, and this README instantiates the current capability graph. Semantic ownership, activation, and mechanical enforcement remain distinct.
+Each top-level skill directory is independently discoverable through its `SKILL.md` entrypoint. The collection follows the open [Agent Skills](https://agentskills.io/home) format: compatible agents discover concise metadata first and load full instructions and bundled resources only when task traits match. Agentic Tend's [capability model](https://github.com/agentic-tend/.github/blob/main/docs/capability-model.md) owns the primitive ontology, its [context ownership model](https://github.com/agentic-tend/.github/blob/main/docs/context-ownership.md) owns placement and activation boundaries, and this README instantiates the current capability graph. Semantic ownership, activation, and mechanical enforcement remain distinct.
 
 Skills are composable capabilities dispatched from task traits, not mutually exclusive task owners. Modularity encapsulates reusable logic and authority routing; composability exposes ports through which selected capabilities consume the same task data and contribute decisions or evidence.
 
@@ -35,8 +35,9 @@ gh skill publish --dry-run
 
 ## See also
 
-- The [agentic tooling model](https://github.com/agentic-tend/.github/blob/main/docs/agentic-tooling.md) owns the motivation and layer theory.
-- The [development capability model](https://github.com/agentic-tend/.github/blob/main/docs/development.md) illustrates composition without prescribing a fixed reasoning trajectory.
+- The [Agentic Tend principles](https://github.com/agentic-tend/.github/blob/main/docs/principles.md) own the motivation and pressure for persistent structure.
+- The [presentation model](https://github.com/agentic-tend/.github/blob/main/docs/presentation.md) owns progressive disclosure for human review.
+- The [development capability model](https://github.com/agentic-tend/.github/blob/main/docs/development.md) illustrates composition without prescribing a fixed workflow.
 - The [organization roadmap](https://github.com/agentic-tend/.github/blob/main/docs/roadmap.md) tracks evidence and extension work spanning multiple tooling layers.
 
 ## License
