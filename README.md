@@ -2,7 +2,7 @@
 
 This repository owns Agentic Tend's reusable skills layer, dogfooded in Codex before publication.
 
-Each top-level skill directory is independently discoverable through its `SKILL.md` entrypoint. The collection follows the open [Agent Skills](https://agentskills.io/home) format: compatible agents discover concise metadata first and load full instructions and bundled resources only when task traits match. [Agentic Tend's context ownership model](https://github.com/agentic-tend/.github/blob/main/docs/context-ownership.md) owns the primitive ontology; this README instantiates the current capability graph. Activation, semantic ownership, and mechanical enforcement remain distinct.
+Each top-level skill directory is independently discoverable through its `SKILL.md` entrypoint. The collection follows the open [Agent Skills](https://agentskills.io/home) format: compatible agents discover concise metadata first and load full instructions and bundled resources only when task traits match. Agentic Tend's [agentic tooling model](https://github.com/agentic-tend/.github/blob/main/docs/agentic-tooling.md) owns the primitive ontology, its [context ownership model](https://github.com/agentic-tend/.github/blob/main/docs/context-ownership.md) owns placement and activation boundaries, and this README instantiates the current capability graph. Semantic ownership, activation, and mechanical enforcement remain distinct.
 
 Skills are composable capabilities dispatched from task traits, not mutually exclusive task owners. Modularity encapsulates reusable logic and authority routing; composability exposes ports through which selected capabilities consume the same task data and contribute decisions or evidence.
 
