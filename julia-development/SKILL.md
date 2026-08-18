@@ -1,6 +1,7 @@
 ---
 name: julia-development
-description: Develop, refactor, review, or diagnose Julia code using the target project's contracts and version-compatible official Julia documentation. Use for any Julia implementation or code review, and for performance work when the user requests it or evidence identifies a hot path, allocation, type-instability, benchmark regression, threading issue, or new performance promise.
+description: Own Julia-specific decisions about semantics, dispatch, API design, and host conventions for code, comments, docstrings, and Documenter.jl using the target project's contracts and version-compatible official Julia documentation. Use for any Julia implementation, refactor, review, diagnosis, or Documenter.jl realization, and for performance work when requested or when evidence identifies a hot path, allocation, type-instability, benchmark regression, threading issue, or new performance promise. Do not own language-independent software topology or prose organization.
+license: MIT. See LICENSE.txt for complete terms and notices
 ---
 # Julia Development
 
@@ -17,6 +18,7 @@ Reconstruct Julia behavior from project evidence and Julia's own semantics. Do n
 Use the official manual as the authority instead of relying on remembered language resemblance:
 
 - For style, API boundaries, and dispatch, consult the [Style Guide](https://docs.julialang.org/en/v1/manual/style-guide/), [Types](https://docs.julialang.org/en/v1/manual/types/), [Methods](https://docs.julialang.org/en/v1/manual/methods/), and [Conversion and Promotion](https://docs.julialang.org/en/v1/manual/conversion-and-promotion/).
+- For comments, docstrings, documentation attachment, and Julia-specific authoring conventions, consult [Writing Documentation](https://docs.julialang.org/en/v1/manual/documentation/) and the relevant Style Guide section instead of copying stable language rules into this skill.
 - For a migration, a construct that resembles Python or MATLAB, or unresolved cross-language semantics, consult [Noteworthy Differences](https://docs.julialang.org/en/v1/manual/noteworthy-differences/).
 - For version-sensitive behavior, replace `/en/v1/` with documentation for the Julia release compatible with the project and verify that page before acting.
 
@@ -35,7 +37,15 @@ Represent a concept with the least structure that preserves its semantics.
 - verb with state: Use a callable object when the operation itself has persistent, inspectable state or lifecycle, so that the transformation deserves an identity of its own.
 - noun: Use an ordinary data object with external operations when the object represents a domain entity that admits several equally meaningful behaviors; do not arbitrarily elevate one verb into the object's identity.
 
+The official [`!` convention](https://docs.julialang.org/en/v1/manual/style-guide/#bang-convention) identifies mutation; it does not determine the return type. The guide describes returning a modified array as typical for convenience, not as an absolute contract. For a project-owned command-like mutator, return `nothing` when the caller already holds the mutated target, the operation has no independent result, and the API does not promise composition. This avoids presenting the returned alias as a second data-flow edge. Preserve a value-producing, output-buffer, external-generic, or existing public return contract when it applies.
+
 Julia permits arbitrary objects to be callable, but that mechanism alone does not justify a callable struct. Let the project contract and the object's semantic role choose among these forms; do not impose a rigid checklist or introduce a bespoke container merely to shorten an argument list. See the official [function-like object](https://docs.julialang.org/en/v1/manual/methods/#Function-like-objects) semantics when the distinction matters.
+
+## Compose code prose
+
+When Julia work changes persistent prose, own only Julia attachment and host-specific syntax or conventions. Preserve established software meaning, prose structure, and generic artifact-language realization as distinct concerns, and reconcile official guidance with the target project's active style rather than silently overriding either.
+
+When task data shows that Documenter.jl renders the target, read [Documenter.jl authoring](references/documenter.md) before choosing Julia-specific syntax or validation.
 
 ## Select a feedback surface
 

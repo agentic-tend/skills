@@ -11,7 +11,7 @@ from pathlib import Path
 REPOSITORY = Path(__file__).resolve().parents[1]
 SCRIPT = (
     REPOSITORY
-    / "structure-documentation"
+    / "markdown-authoring"
     / "scripts"
     / "count_markdown_blocks.py"
 )
@@ -155,6 +155,20 @@ Paragraph.
         self.assertEqual(result.returncode, 0)
         self.assertIn("2 logical blocks", result.stdout)
         self.assertIn("review recommended", result.stdout)
+
+    def test_cli_reports_exact_threshold_for_review(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "example.md"
+            path.write_text("# One\n\nParagraph.\n", encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(SCRIPT), "--threshold", "2", str(path)],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+        self.assertEqual(result.returncode, 0)
+        self.assertIn("2 logical blocks", result.stdout)
+        self.assertIn("review recommended; at threshold", result.stdout)
 
     def test_cli_rejects_missing_file(self) -> None:
         result = subprocess.run(

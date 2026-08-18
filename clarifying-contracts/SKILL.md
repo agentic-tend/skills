@@ -1,12 +1,12 @@
 ---
 name: clarifying-contracts
-description: Use when a task, plan, or proposed change has unresolved user-owned choices about purpose, direct object, public behavior, constraints, invariants, scope, decision authority, or acceptance evidence; or when the user asks to clarify or stress-test such a contract before action.
+description: Resolve user-authoritative semantic ambiguity after inspection identifies an unresolved choice that could change purpose, direct object, public behavior, constraints, invariants, scope, decision authority, or acceptance evidence, or when the user asks to clarify or stress-test such a contract. Do not use for discoverable facts or agent-owned implementation choices that preserve the contract.
 license: MIT. See LICENSE.txt for complete terms and notices
 ---
 
 # Clarifying Contracts
 
-Reduce essential ambiguity. Establish why and the observable contract before implementation while leaving equivalent implementation choices to the agent.
+Reduce essential ambiguity without turning ordinary work into a clarification ceremony. Establish why and the observable contract when user judgment is required, while leaving facts to inspection and equivalent implementation choices to the agent.
 
 ## Contract boundary
 
@@ -21,6 +21,12 @@ A contract may define:
 
 Include only fields that affect the task. Do not turn this list into a mandatory template.
 
+Classify the live uncertainty before asking:
+
+- A discoverable fact belongs to inspection, research, or executable evidence.
+- An implementation choice that preserves the established contract belongs to the agent.
+- A semantic decision that could change the contract belongs to the user.
+
 Treat a question as semantic only when different answers could change one of these fields. Treat an implementation choice as semantic only when it changes durable meaning, a public interface, or an observable result. Within applicable instructions and the approved contract, the agent owns implementation choices that leave the contract equivalent.
 
 If a purported implementation question changes several independent outcomes or owners, propose smaller task boundaries instead of asking the user to design the implementation.
@@ -28,15 +34,13 @@ If a purported implementation question changes several independent outcomes or o
 ## Clarification loop
 
 1. Inspect applicable instructions, source files, and current state before asking questions.
-2. Separate discoverable facts from user-owned decisions. Resolve facts from evidence.
+2. Apply the classification above: resolve facts from evidence and make contract-equivalent implementation choices directly.
 3. If a blocking fact lacks evidence, route it to exploration or research. Resume clarification only after the fact is established or explicitly bounded as an assumption.
 4. Identify the unresolved decision with the greatest effect on the contract or on later decisions.
 5. Ask one question. When alternatives exist, state the relevant options and recommend one with its decisive tradeoff.
 6. Incorporate the answer and continue along dependent decisions.
 
-Do not ask for information that can be inspected. Do not ask the user to choose among implementation details the contract leaves equivalent.
-
-If the request already fixes every relevant contract field, state that no clarification is needed and leave this skill. Do not manufacture a design ceremony.
+If the audit finds no unresolved user-owned semantic decision, state that no clarification is needed when the skill was explicitly invoked, then leave it. Do not manufacture a design ceremony.
 
 ## Completion and approval
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "Julia Development"
-  short_description: "Route Julia work through project and official evidence"
-  default_prompt: "Use $julia-development to implement or review this Julia change against the project contract and official Julia semantics."
+  short_description: "Decide Julia semantics from project evidence"
+  default_prompt: "Use $julia-development to implement or review this Julia or Documenter.jl change against the project contract and official Julia semantics."

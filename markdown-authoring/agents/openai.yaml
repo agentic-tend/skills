@@ -1,0 +1,4 @@
+interface:
+  display_name: "Markdown Authoring"
+  short_description: "Author Markdown against its actual renderer"
+  default_prompt: "Use $markdown-authoring to edit this Markdown artifact against its source and renderer contracts."

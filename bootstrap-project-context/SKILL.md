@@ -1,6 +1,6 @@
 ---
 name: bootstrap-project-context
-description: Derive, audit, or migrate persistent repository agent context from durable local evidence, then apply the minimum sufficient result, including a valid zero-file result. Use for repository agent rules, decisions, local skills, mechanical enforcement, generators, or retirement of generic agent scaffolding. Do not use for ordinary implementation or transient planning.
+description: Derive, audit, or migrate persistent repository agent context and its decision owners from durable local evidence, then apply the minimum sufficient result, including a valid zero-file result. Use for repository agent rules, decisions, local skills, mechanical enforcement, generators, or retirement of generic agent scaffolding. Do not use for ordinary implementation or transient planning.
 license: MIT. See LICENSE.txt for complete terms and notices
 ---
 
@@ -12,7 +12,7 @@ Apply this rule throughout the workflow:
 
 Interpret minimal as the smallest sufficient structure that preserves every non-inferable preference, authority boundary, rationale, source, and local contract needed for future work. It does not mean the fewest files or shortest prose.
 
-Treat audit and classification as inputs to the change, not as the final output. Apply the justified repository-local increment unless the request is read-only.
+Treat audit and derived ownership metadata as inputs to the change, not as the final output. Apply the justified repository-local increment unless the request is read-only.
 
 ## 1. Inspect actual state
 
@@ -23,7 +23,7 @@ Read the prompt and active instructions, then inspect the repository before prop
 - locate tests, validation commands, CI, hooks, and release machinery;
 - read existing `AGENTS.md`, repository skills, decisions, and relevant documentation;
 - inspect representative instances before a broad semantic migration;
-- distinguish repository facts, inherited preferences, user-owned choices, and one-time prompt constraints.
+- distinguish repository facts, inherited preferences, agent-owned implementation choices, user-owned semantic choices, and one-time prompt constraints.
 
 Do not ask the user for facts that the repository can answer. Treat frequent legacy usage as evidence, not as authority.
 
@@ -39,21 +39,21 @@ Persist a candidate only when it is:
 
 Keep one-time prompt constraints transient. Treat a zero-file result as valid. Do not create empty directories, placeholder decisions, generic policy copies, or a standard context skeleton without evidence.
 
-## 3. Classify the semantic layer
+## 3. Derive ownership and activation metadata
 
-Classify meaning before choosing the mechanism that activates or enforces it:
+Derive placement for each decision before choosing the mechanism that activates or enforces it. Do not classify the whole task or artifact into one semantic layer.
 
-The following classification is the self-contained executable projection of Agentic Tend's public [context ownership model](https://github.com/agentic-tend/.github/blob/main/docs/context-ownership.md). Use the public document for rationale and this projection for the migration decision.
+The following table is the self-contained executable projection of Agentic Tend's public [context ownership model](https://github.com/agentic-tend/.github/blob/main/docs/context-ownership.md). Use the public document for rationale and this projection for each migration decision.
 
 | Semantic layer | Content | Canonical context |
 | --- | --- | --- |
 | Model capability | General intelligence the model can already supply | Do not encode it as policy |
 | L0 cross-domain epistemology | Unconditional reasoning preferences plus the smallest authority and routing appendix | User-level `AGENTS.md` |
-| L1 conditional realization | Domain taste, reusable workflows, or expertise | User-level skills |
+| L1 conditional realization | Composable taste, reusable workflows, or expertise | User-level skills |
 | L2 repository truth | Repository-specific facts, constraints, public contracts, local workflows, and evidence-backed rationale | Repository `AGENTS.md`, repository skills, or `decisions/` according to activation and retrieval need |
 | Current task only | Temporary instructions, exploration notes, and unconfirmed ideas | Transient task state |
 
-Use one canonical owner for each decision and link downstream consumers instead of restating it.
+A task or artifact may involve decisions at several layers. Use one canonical owner for each decision and link downstream consumers instead of restating it. Treat mechanically derivable metadata as a view over repository data; persist it only when it has independent durable meaning or repeated retrieval failure creates concrete pressure.
 
 ## 4. Choose activation and enforcement
 
@@ -62,7 +62,7 @@ Keep activation and enforcement orthogonal to the semantic layers:
 | Mechanism | Use when |
 | --- | --- |
 | `AGENTS.md` | The owned context must load ambiently at its applicable user or repository scope |
-| Skill | A reusable workflow or domain realization has a distinct trigger |
+| Skill | A reusable capability has a distinct task-matching predicate |
 | Human document or decision | Motivation or durable rationale should be retrieved for its question rather than loaded ambiently |
 | Test, hook, or CI | A mechanically observable part of a canonical contract has a reliable oracle |
 | Generator | Repeated deterministic materialization is safer than direct maintenance |
@@ -79,7 +79,7 @@ Classify a conflict before correcting it:
 
 For an authority conflict, retain one owner and replace copies with navigation. For an abstraction gap, change the nearest justified owner only when the gap blocks work or recurs. For instance drift, correct the instance without broadening the policy.
 
-Separate meaning-preserving mechanical edits from changes to user-owned semantics. Use `$clarifying-contracts` only when an unresolved choice would materially change ownership, public behavior, scope, constraints, authority, migration, or acceptance evidence.
+Separate meaning-preserving mechanical edits from changes to user-owned semantics. When an unresolved choice would materially change ownership, public behavior, scope, constraints, authority, migration, or acceptance evidence, return it to task data as a user-owned semantic decision; do not resolve it inside context migration.
 
 ## 6. Pressure-test the migration
 
@@ -100,7 +100,7 @@ Deletion requires evidence that no non-inferable preference, authority, rational
 - Create a repository skill only for a repeatable local workflow with a distinct trigger and outcome.
 - Add a hook or CI check only when the condition is mechanically observable and false positives are acceptably low.
 - Add a generator only when repeated materialization is safer than direct maintenance.
-- Use `$structure-documentation` for every persistent prose edit, including `AGENTS.md`, decisions, comments, and docstrings.
+- Preserve the concern, semantic, artifact-language, and host boundaries of selected capabilities; context migration must not absorb their decisions.
 
 When migrating context, move each useful item to its canonical owner once, update navigation, and remove stale copies. Do not preserve generic scaffolding for compatibility unless a real consumer contract requires it.
 
