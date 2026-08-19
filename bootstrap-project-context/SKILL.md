@@ -48,7 +48,7 @@ The following table is the self-contained executable projection of Agentic Tend'
 | Semantic layer | Content | Canonical context |
 | --- | --- | --- |
 | Model capability | General intelligence the model can already supply | Do not encode it as policy |
-| L0 cross-domain epistemology | Unconditional reasoning preferences plus the smallest authority and routing appendix | User-level `AGENTS.md` |
+| L0 interaction contract | Unconditional cross-domain task-grounding, presentation, and authority boundaries | User-level `AGENTS.md` |
 | L1 conditional realization | Composable taste, reusable workflows, or expertise | User-level skills |
 | L2 repository truth | Repository-specific facts, constraints, public contracts, local workflows, and evidence-backed rationale | Repository `AGENTS.md`, repository skills, or `decisions/` according to activation and retrieval need |
 | Current task only | Temporary instructions, exploration notes, and unconfirmed ideas | Transient task state |

@@ -18,15 +18,13 @@ Do not report a validation command as completed without command or output eviden
 
 Technical completion does not authorize a commit, push, pull request, publication, release, or archive. Follow the active authority boundary and leave external delivery to the user unless that action was explicitly requested.
 
-## Completion report
+## Software handoff
 
-After completing a task, report:
+Specialize the active interaction contract from current software task data. Present the obstruction and achieved technical outcome before the completed scope and material behavior or contract changes, then expose implementation mechanics and validation evidence. These are `why -> what -> how` dependencies, not required report headings.
 
-- what changed;
-- what was validated;
-- what was not validated and why;
-- any remaining blocker or material uncertainty;
-- a suggested commit message.
+Promote any detail that changes judgment into the earliest sufficient layer. A one-line public-contract change, failed or incomplete validation, blocker, or material uncertainty takes precedence over extensive inferable implementation detail. Keep commands, raw output, and the underlying diff reachable when they exist.
+
+State what validation ran, what did not run and why, and any remaining blocker or material uncertainty. Include a suggested commit message.
 
 ## Commit attribution
 
