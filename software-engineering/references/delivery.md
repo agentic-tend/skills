@@ -20,12 +20,12 @@ Technical completion does not authorize a commit, push, pull request, publicatio
 
 ## Software handoff
 
-Specialize the active interaction contract from current software task data. Present the obstruction and achieved technical outcome before the completed scope and material behavior or contract changes, then expose implementation mechanics and validation evidence. These are `why -> what -> how` dependencies, not required report headings.
+Specialize the active interaction contract from current software task data. Layer the handoff by reader responsibility: lead with the achieved outcome and affected public interface; then give material contract changes, validation, blockers, and uncertainty; keep implementation mechanics and raw evidence in the deepest reachable layer. A reader responsible only for the public interface should be able to stop after the first layer.
 
 Promote any detail that changes judgment into the earliest sufficient layer. A one-line public-contract change, failed or incomplete validation, blocker, or material uncertainty takes precedence over extensive inferable implementation detail. Keep commands, raw output, and the underlying diff reachable when they exist.
 
-State what validation ran, what did not run and why, and any remaining blocker or material uncertainty. Include a suggested commit message.
+State what validation ran, what did not run and why, and any remaining blocker or material uncertainty. Include a suggested commit message only when the user requests a commit, pull-request package, or commit-level delivery prose.
 
 ## Commit attribution
 
-Suggested commit messages use `Assisted-By: <agent> <email>` instead of `Co-Authored-By:`.
+When a suggested commit message is in scope, use `Assisted-By: <agent> <email>` instead of `Co-Authored-By:`.

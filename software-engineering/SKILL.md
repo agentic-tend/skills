@@ -18,7 +18,7 @@ Let software structure grow from the established contract and concrete pressure.
 
 Read [implementation](references/implementation.md) when creating or changing topology, introducing an abstraction, refactoring, redesigning, or optimizing. Let structure grow only from the contract and concrete pressure.
 
-Read [testing](references/testing.md) when behavior or acceptance evidence changes, or when reviewing test quality. Test observable contracts rather than private implementation shape.
+Read [testing](references/testing.md) when behavior or acceptance evidence changes, or when reviewing test quality. Treat tests as executable design language at observable responsibility boundaries: establish acceptance evidence early enough to constrain implementation, and leave each boundary's replaceable internals unspecified.
 
 Read [delivery](references/delivery.md) before handing completed work back or preparing requested delivery prose. Keep local technical evidence separate from authority for external action.
 
