@@ -26,14 +26,14 @@ Once the skill activates, the coordinating agent presents a human-visible plan b
 
 This visibility is not an approval gate. Continue within the current contract and authority; pause only for a user-owned semantic choice, expanded authority, destructive action, or another boundary that already requires human input.
 
-Establish the smallest vertical skeleton before horizontal detail: motivation, observable contract, port boundaries, and applicable evidence pressure must constrain local realization. This is a logical dependency, not a fixed runtime sequence; structure, execution, and feedback may interleave after the boundary is coherent.
+Establish the minimum observable port topology before filling local execution detail: motivation, contract, port boundaries, and applicable validity sources must constrain each port's realization. This is a logical dependency, not a fixed runtime sequence; structure, execution, and feedback may interleave after the boundary is coherent.
 
 ## Derive conditional ports
 
 Derive the minimum port graph from current task data. These ports describe effective interfaces, not persistent roles or mandatory stages.
 
 - **Coordinator bridge:** consumes the request, established contract, task data, authority, and returned evidence. It exposes the plan and delivery, bounds port interfaces, maintains feedback edges, and applies the stopping contract. It does not own truth or resolve disagreement by preference or vote.
-- **Prior-evidence port:** appears only when valid evidence can be formed independently and implementation exposure could contaminate it. Give it motivation, contract, current facts, and applicable validity sources, but withhold the proposed implementation when independence matters. It returns supported mechanical predicates, semantic pressure, and explicit unvalidated boundaries.
+- **Prior-evidence port:** appears only when valid evidence can be formed independently and implementation exposure could contaminate it. Give it motivation, contract, current facts, and applicable validity sources, but withhold the proposed implementation when independence matters. It returns supported mechanical predicates, judgment-changing findings, and explicit unvalidated boundaries.
 - **Worker port:** consumes a bounded objective, contract, authoritative facts, allowed actions, and applicable capabilities. It returns an artifact or claim, observations, evidence, provenance, and unresolved boundaries. Its internal trajectory remains unspecified.
 - **Posterior-review port:** appears when an independent attempt can expose a plausible failure or compress review. Give it the resulting artifact, contract, evidence, and needed environment without an unnecessary success narrative. It returns a counterexample, disagreement, evidence gap, or bounded support with provenance.
 
@@ -41,9 +41,9 @@ The coordinator is the stable human ingress and egress once multi-agent executio
 
 ## Preserve oracle and capability ownership
 
-A mechanical predicate belongs in prior evidence only when an available oracle can decide it and the contract makes the check useful. Semantic pressure traces a result to motivation, contract, or human authority, but an agent's satisfaction judgment remains a claim. If no validity source can decide a claim, mark it unvalidated instead of fabricating a test or evaluator.
+A mechanical predicate belongs in prior evidence only when an available oracle can decide it and the contract makes the check useful. An interpretation is useful only when it traces a result to motivation, contract, evidence, or human authority; an agent's satisfaction judgment remains a claim. If no validity source can decide a claim, mark it unvalidated instead of fabricating a test or evaluator.
 
-When software work activates `$software-engineering`, let that capability own testing, vertical and horizontal implementation, oracle integrity, and delivery semantics. This skill decides only whether those judgments benefit from separate contexts; it does not redefine them or change any other capability's semantic owner.
+When software work activates `$software-engineering`, let that capability own implementation topology and realization, testing, oracle integrity, and delivery semantics. This skill decides only whether those judgments benefit from separate contexts; it does not redefine them or change any other capability's semantic owner.
 
 ## Route recursive feedback
 

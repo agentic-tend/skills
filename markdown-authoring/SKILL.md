@@ -32,7 +32,7 @@ Use the bundled counter as a review proxy, not as a quality metric:
 python3 scripts/count_markdown_blocks.py PATH...
 ```
 
-Resolve the script path relative to this skill when calling it elsewhere. At `>= threshold` logical blocks, treat the count as review evidence and return it to task data for trait re-derivation. Do not choose pruning, compression, disclosure, or splitting from the count alone.
+Resolve the script path relative to this skill when calling it elsewhere. The default threshold is `100` and can be changed with `--threshold`. At or above it, report the non-failing signal as pressure to inspect whether semantic or retrieval boundaries have become hard to navigate. The count alone does not establish poor quality, require a split, authorize rewriting or pruning, or expand the task scope.
 
 ## Verify the rendered artifact
 
