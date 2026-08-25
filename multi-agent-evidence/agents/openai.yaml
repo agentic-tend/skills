@@ -2,6 +2,3 @@ interface:
   display_name: "Multi-Agent Evidence"
   short_description: "Derive evidence-separated agent feedback ports"
   default_prompt: "Use $multi-agent-evidence to decide whether evidence-separated agent ports improve this task; if so, show the plan before delegation and return a provenance-aware delivery."
-
-policy:
-  allow_implicit_invocation: true

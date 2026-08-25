@@ -2,6 +2,3 @@ interface:
   display_name: "Structure Documentation"
   short_description: "Organize durable prose independently of syntax"
   default_prompt: "Use $structure-documentation to organize established durable meaning into a clear reading path without changing its semantic contract."
-
-policy:
-  allow_implicit_invocation: true
