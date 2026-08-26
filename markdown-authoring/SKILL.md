@@ -20,7 +20,6 @@ Realize an established documentation structure in Markdown without taking over i
 - Preserve the established meaning, navigation, and public/private boundary.
 - Choose syntax for its semantic role rather than for visual decoration.
 - Use Markdown links for navigation and inline code for literal source tokens.
-- Do not hard-wrap prose or align source mechanically unless repository convention requires it.
 - Start block structures on their own source lines so that their boundaries remain reviewable.
 - Read [GitHub Markdown](references/github.md) when GitHub is the renderer or compatibility target.
 
