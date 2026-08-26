@@ -2,6 +2,3 @@ interface:
   display_name: "Obsidian CLI"
   short_description: "Use Obsidian indexed and runtime state safely"
   default_prompt: "Use $obsidian-cli to inspect this vault through Obsidian indexed state."
-
-policy:
-  allow_implicit_invocation: true

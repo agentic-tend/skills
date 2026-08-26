@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Literature Evidence"
+  short_description: "Build a bounded scientific evidence corpus"
+  default_prompt: "Use $scientific-literature-evidence to build and evaluate a bounded research corpus for this landscape, attribution, version, conflict, or absence question."

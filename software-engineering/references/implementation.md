@@ -4,15 +4,17 @@ This reference defines how implementation topology evolves from an established c
 
 ## Topology evolution
 
-Treat structure and behavior as coupled axes:
+Use two orthogonal views of implementation:
 
-- Vertical evolution establishes the smallest coherent skeleton and public topology when a task creates or changes that topology. At a lifecycle boundary whose contract is not inferable from the surrounding code, decide whether a concise contract docstring is needed to preserve inputs, mutations or outputs, and ordering invariants. Establish these boundaries early enough to guide the implementation, but interleave topology, local semantics, prose, and evidence when the task benefits; do not require empty scaffolding or a fixed authoring sequence for a local correction.
-- Horizontal evolution follows the "make it work, make it right, make it fast" sequence[^three-m]:
+- Vertical design establishes the overall data and logic topology across responsibility levels: the public contract, subsystem and data ownership, interfaces, and control flow. Build only the coherent skeleton the task changes. At a lifecycle boundary whose contract is not inferable from surrounding code, preserve its inputs, mutations or outputs, and ordering invariants with the minimum suitable contract prose.
+- Horizontal realization refines one selected topology unit through the "make it work, make it right, make it fast" sequence[^three-m]:
   1. write the smallest plain-code implementation that satisfies the contract;
   2. simplify the working code and align its units with the declared topology;
   3. optimize only against explicit performance evidence and a relevant benchmark.
 
-During horizontal evolution, add motivation comments only at non-obvious state transitions where removing the comment would create a logical gap. Explain why the transition is necessary without narrating the code. Software engineering owns this semantic decision; prose and language capabilities own expression and host syntax once the need is established.
+The views may interleave as feedback changes either the topology or the selected unit. They describe software design and realization, not a global task taxonomy or a fixed authoring sequence.
+
+During horizontal realization, add motivation comments only at non-obvious state transitions where removing the comment would create a logical gap. Explain why the transition is necessary without narrating the code. Software engineering owns this semantic decision; prose and language capabilities own expression and host syntax once the need is established.
 
 Correct behavior supplies the observable baseline for later simplification and optimization.
 

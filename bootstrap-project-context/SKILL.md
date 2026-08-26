@@ -12,7 +12,7 @@ Apply this rule throughout the workflow:
 
 Interpret minimal as the smallest sufficient structure that preserves every non-inferable preference, authority boundary, rationale, source, and local contract needed for future work. It does not mean the fewest files or shortest prose.
 
-Treat audit and derived ownership metadata as inputs to the change, not as the final output. Apply the justified repository-local increment unless the request is read-only.
+Audit is the sensing phase. A durable, non-inferable gap creates persistence pressure but does not itself authorize a write. For an authorized bootstrap or migration, treat the findings and derived ownership metadata as inputs and apply the minimum justified repository-local increment. For a read-only request, return the findings. Implicit skill activation does not enlarge the active authority boundary.
 
 ## 1. Inspect actual state
 

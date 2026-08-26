@@ -37,7 +37,7 @@ Represent a concept with the least structure that preserves its semantics.
 - verb with state: Use a callable object when the operation itself has persistent, inspectable state or lifecycle, so that the transformation deserves an identity of its own.
 - noun: Use an ordinary data object with external operations when the object represents a domain entity that admits several equally meaningful behaviors; do not arbitrarily elevate one verb into the object's identity.
 
-The official [`!` convention](https://docs.julialang.org/en/v1/manual/style-guide/#bang-convention) identifies argument mutation; it does not determine the return type. Once the software contract establishes whether a return edge exists, implement that decision deliberately. Julia implicitly returns the final expression, so end a project-owned command-like mutator with explicit `return nothing` when it has no result edge; otherwise an internal operation can accidentally become its public return. Preserve an independent result, an existing public return contract, or the return required by an output-buffer or external generic such as [`LinearAlgebra.mul!`](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/#LinearAlgebra.mul!).
+The official [`!` convention](https://docs.julialang.org/en/v1/manual/style-guide/#bang-convention) identifies argument mutation; it does not determine the return type. Let the software contract decide whether a return edge exists, then realize that decision in Julia. Because a Julia function [returns the value of its last evaluated expression by default](https://docs.julialang.org/en/v1/manual/functions/#The-return-Keyword), end a project-owned command-like mutator with explicit `return nothing` when it has no result so that an internal operation does not accidentally become its public return. Preserve an independent result, an existing public return contract, or the return required by an output-buffer or external generic such as [`LinearAlgebra.mul!`](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/#LinearAlgebra.mul!).
 
 Julia permits arbitrary objects to be callable, but that mechanism alone does not justify a callable struct. Let the project contract and the object's semantic role choose among these forms; do not impose a rigid checklist or introduce a bespoke container merely to shorten an argument list. See the official [function-like object](https://docs.julialang.org/en/v1/manual/methods/#Function-like-objects) semantics when the distinction matters.
 
@@ -58,9 +58,3 @@ Record the Julia version and relevant platform, dependency, and backend state be
 Enter performance diagnosis only when the user requests performance work, the change touches a known hot path, measurements show allocation, type-instability, or regression, or the change makes a new performance promise.
 
 When that pressure exists, consult the official [Performance Tips](https://docs.julialang.org/en/v1/manual/performance-tips/) for the project's Julia version. Establish a valid baseline, locate the cause with available Julia evidence, and validate the selected change against the same measurement. Do not turn performance advice into a universal requirement for ordinary Julia work.
-
-## Keep the skill evidence-gated
-
-Treat external community skills as scenario and failure-mode discovery, not Julia authority. Do not copy their rules into this skill.
-
-Process guidance explicitly chosen by the maintainer may be persisted directly. Add a Julia semantic or performance conclusion only after route-only behavior repeats the same failure in independent scenarios and a minimal candidate, grounded in an official Julia section, fixes a sealed holdout without regressing other suites. A route-only result with no distilled language rule is valid.

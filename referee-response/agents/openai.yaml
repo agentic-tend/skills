@@ -1,0 +1,4 @@
+interface:
+  display_name: "Referee Response"
+  short_description: "Answer scientific referee comments precisely"
+  default_prompt: "Use $referee-response to draft an evidence-backed answer to this referee comment and map any promised manuscript revision."

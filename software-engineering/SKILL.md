@@ -1,6 +1,6 @@
 ---
 name: software-engineering
-description: Own software-engineering decisions about behavior, topology, implementation, testing, feedback, refactoring, performance, review, delivery, and whether embedded prose must preserve non-inferable software meaning. Use for any task with these software traits, including mixed tasks. Do not use for prose-only expression or host-language attachment that makes no software decision.
+description: Own software-engineering decisions about behavior, topology, implementation, testing, feedback, refactoring, performance, review, delivery, task-local structured IR, and whether embedded prose must preserve non-inferable software meaning. Use for software work and when pseudocode is requested for software logic, data, state, concurrency, lifecycle, or recovery. Do not use for prose-only expression or host-language attachment that makes no software decision.
 license: MIT. See LICENSE.txt for complete terms and notices
 ---
 
@@ -18,9 +18,11 @@ Let software structure grow from the established contract and concrete pressure.
 
 Read [implementation](references/implementation.md) when creating or changing topology, introducing an abstraction, refactoring, redesigning, or optimizing. Let structure grow only from the contract and concrete pressure.
 
-Read [testing](references/testing.md) when behavior or acceptance evidence changes, or when reviewing test quality. Test observable contracts rather than private implementation shape.
+Read [structured IR](references/pseudocode.md) when pseudocode is the requested deliverable or review surface, or when software logic or data evolution must become reviewable before selecting its realization. The reference owns the deliverable, blocking-review, and non-blocking implementation paths.
 
-Read [delivery](references/delivery.md) before handing completed work back or preparing requested delivery prose. Keep local technical evidence separate from authority for external action.
+Read [testing](references/testing.md) when behavior or acceptance evidence changes, or when reviewing test quality. Treat tests as executable design language at observable responsibility boundaries: establish acceptance evidence early enough to constrain implementation, and leave each boundary's replaceable internals unspecified.
+
+Read [delivery](references/delivery.md) before handing completed work back or preparing requested delivery prose.
 
 Read [feedback](references/feedback.md) when a result is surprising, the cause or oracle is uncertain, the work needs iterative diagnosis or measurement, or a proposed guardrail extends beyond the established contract. Use feedback to discriminate among hypotheses, not to justify additional behavior by default.
 
@@ -32,4 +34,4 @@ Read [feedback](references/feedback.md) when a result is surprising, the cause o
 
 ## 4. Verify and report
 
-Run validation at the observable boundary when the execution context permits, and never claim a check passed without evidence. Follow the delivery reference for the completion report and any unvalidated boundary.
+Follow the delivery reference to validate the observable boundary and report completion or remaining uncertainty.

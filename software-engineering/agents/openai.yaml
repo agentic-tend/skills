@@ -2,6 +2,3 @@ interface:
   display_name: "Software Engineering"
   short_description: "Engineer software against contracts and evidence"
   default_prompt: "Use $software-engineering to design, implement, test, or review this software change."
-
-policy:
-  allow_implicit_invocation: true

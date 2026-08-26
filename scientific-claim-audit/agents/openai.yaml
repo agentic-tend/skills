@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Claim Audit"
+  short_description: "Test a scientific claim against evidence"
+  default_prompt: "Use $scientific-claim-audit to determine which parts of this scientific claim are supported, bounded, contradicted, or unresolved."
