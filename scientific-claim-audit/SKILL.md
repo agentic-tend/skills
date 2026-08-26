@@ -34,5 +34,5 @@ Determine what the evidence supports before prose or delivery choices obscure th
 
 - Lead with the smallest set of judgment-changing findings. For each, give an exact pointer, support status, why it matters, and the strongest supportable claim or unresolved gap.
 - When no material problem is found, state what was checked and what remains untested.
-- Return scientific meaning, not final prose or artifact syntax. Compose `$structure-documentation` when durable wording is requested. For comments, LaTeX, figures, presentations, compilation, or rendering, follow the repository's build instructions and use the current artifact tools; those mechanics remain outside this audit.
-- An audit-only request does not authorize edits or new calculations. Stop when each claim in scope is supported, bounded, contradicted, or explicitly unresolved. A passing build, converged optimizer, or agent agreement validates only the predicate it directly tests.
+- Return scientific meaning to `$structure-documentation` when durable wording is requested. Route comments, LaTeX, figures, presentations, compilation, and rendering through the repository's build instructions and current artifact tools.
+- Stop when each claim in scope is supported, bounded, contradicted, or explicitly unresolved. A passing build, converged optimizer, or agent agreement validates the predicate it directly tests.

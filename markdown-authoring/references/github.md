@@ -1,6 +1,6 @@
 # GitHub Markdown
 
-Use this reference when GitHub renders the Markdown artifact. It owns GitHub-specific realization, not the meaning or reading path of the prose.
+Use this reference when GitHub renders the Markdown artifact. It owns GitHub-specific realization while prose meaning and reading path retain their established owners.
 
 ## Realize the selected structure
 

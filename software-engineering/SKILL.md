@@ -17,11 +17,12 @@ Let software structure grow from the established contract and concrete pressure.
 ## 2. Select the method
 
 Read [implementation](references/implementation.md) when creating or changing topology, introducing an abstraction, refactoring, redesigning, or optimizing. Let structure grow only from the contract and concrete pressure.
+
 Read [structured IR](references/pseudocode.md) when pseudocode is the requested deliverable or review surface, or when software logic or data evolution must become reviewable before selecting its realization. The reference owns the deliverable, blocking-review, and non-blocking implementation paths.
 
 Read [testing](references/testing.md) when behavior or acceptance evidence changes, or when reviewing test quality. Treat tests as executable design language at observable responsibility boundaries: establish acceptance evidence early enough to constrain implementation, and leave each boundary's replaceable internals unspecified.
 
-Read [delivery](references/delivery.md) before handing completed work back or preparing requested delivery prose. Keep local technical evidence separate from authority for external action.
+Read [delivery](references/delivery.md) before handing completed work back or preparing requested delivery prose.
 
 Read [feedback](references/feedback.md) when a result is surprising, the cause or oracle is uncertain, the work needs iterative diagnosis or measurement, or a proposed guardrail extends beyond the established contract. Use feedback to discriminate among hypotheses, not to justify additional behavior by default.
 
@@ -33,4 +34,4 @@ Read [feedback](references/feedback.md) when a result is surprising, the cause o
 
 ## 4. Verify and report
 
-Run validation at the observable boundary when the execution context permits, and never claim a check passed without evidence. Follow the delivery reference for the completion report and any unvalidated boundary.
+Follow the delivery reference to validate the observable boundary and report completion or remaining uncertainty.

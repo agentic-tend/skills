@@ -6,7 +6,7 @@ Use this reference for standalone project documentation whose file ownership, na
 
 - State each file's essence in its first non-heading sentence.
 - Keep a semantic block in a file only when that artifact's retrieval boundary explains why it belongs there. A mixed artifact may carry decisions from several owners; do not split it solely to manufacture one owner per file.
-- Add navigation where a real reader path requires it. Do not impose a fixed `See also` section.
+- Add navigation where a real reader path requires it.
 - Prefer one canonical explanation with downstream navigation over synchronized copies.
 
 ## Build the reading path

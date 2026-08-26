@@ -18,13 +18,13 @@ Answer the objection that was actually raised, using scientific conclusions alre
 ## Build the answer
 
 - Select the response move that matches the evidence: acknowledge, correct, clarify, provide validation, state a bounded contribution, or leave an unresolved author choice visible.
-- Lead with the direct answer. Add only the evidence and context needed to resolve the objection; do not let defensive background answer a different question.
+- Lead with the direct answer. Attach each supporting block to the exact objection and the evidence needed to resolve it.
 - Distinguish validation evidence from contribution claims and scientific claims from journal-positioning arguments.
 - Map every promised revision to an exact manuscript target. Use past-tense revision language only after the same bounded statement appears in the current source.
 
 ## Preserve scope and delivery ownership
 
-- Do not answer an objection the user intentionally left out of scope, manufacture new evidence, or infer authorization for new calculations, manuscript edits, submission actions, or external correspondence.
-- When revisions are authorized, synchronize the response and every affected manuscript claim surface. A compilable document verifies the artifact, not the scientific statement.
-- Compose `$structure-documentation` for the response's reading path and professional prose. For LaTeX, comments, compilation, rendering, or tracked-change mechanics, follow the repository's build instructions and use the current artifact tools; this skill does not own those mechanics.
+- The scoped objection and established evidence determine the response and revision map. The map routes new calculations, manuscript edits, submission actions, and external correspondence to their authorized workflows.
+- When revisions are authorized, synchronize the response and every affected manuscript claim surface. Compilation verifies the artifact; controlling scientific evidence supports the statement.
+- Compose `$structure-documentation` for the response's reading path and professional prose. Route LaTeX, comments, compilation, rendering, and tracked-change mechanics through the repository's build instructions and current artifact tools.
 - Stop when the scoped objection has a direct evidence-backed answer, each promised revision matches current source, and any unresolved choice is explicit.

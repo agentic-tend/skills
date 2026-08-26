@@ -13,7 +13,6 @@ Use the CLI as an adapter to a running Obsidian application when its index or ap
 - Use filesystem tools for ordinary file inspection and exact Markdown or YAML edits.
 - Use the CLI when Obsidian-resolved links or properties, Bases, or running application state are the relevant source of truth.
 - Use `move` or `rename` when an approved operation must update Obsidian-managed internal links.
-- Do not use this skill for plugin or theme development and debugging.
 
 ## Run commands
 
