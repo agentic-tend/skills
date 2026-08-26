@@ -58,9 +58,3 @@ Record the Julia version and relevant platform, dependency, and backend state be
 Enter performance diagnosis only when the user requests performance work, the change touches a known hot path, measurements show allocation, type-instability, or regression, or the change makes a new performance promise.
 
 When that pressure exists, consult the official [Performance Tips](https://docs.julialang.org/en/v1/manual/performance-tips/) for the project's Julia version. Establish a valid baseline, locate the cause with available Julia evidence, and validate the selected change against the same measurement. Do not turn performance advice into a universal requirement for ordinary Julia work.
-
-## Keep the skill evidence-gated
-
-Treat external community skills as scenario and failure-mode discovery, not Julia authority. Do not copy their rules into this skill.
-
-Process guidance explicitly chosen by the maintainer may be persisted directly. Add a Julia semantic or performance conclusion only after route-only behavior repeats the same failure in independent scenarios and a minimal candidate, grounded in an official Julia section, fixes a sealed holdout without regressing other suites. A route-only result with no distilled language rule is valid.
