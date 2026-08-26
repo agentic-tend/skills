@@ -12,7 +12,6 @@ Use this reference for standalone project documentation whose file ownership, na
 ## Build the reading path
 
 - Introduce hierarchy when groups of semantic blocks expose a real semantic topology or retrieval path.
-- Prefer pseudo-code to prose in planning when it clarifies language-independent design before implementation.
 - Order explanation from motivation or obstruction through contract and structure to mechanism, evidence, and limits.
 
 ## Select a structure

@@ -1,6 +1,6 @@
 ---
 name: software-engineering
-description: Own software-engineering decisions about behavior, topology, implementation, testing, feedback, refactoring, performance, review, delivery, and whether embedded prose must preserve non-inferable software meaning. Use for any task with these software traits, including mixed tasks. Do not use for prose-only expression or host-language attachment that makes no software decision.
+description: Own software-engineering decisions about behavior, topology, implementation, testing, feedback, refactoring, performance, review, delivery, task-local structured IR, and whether embedded prose must preserve non-inferable software meaning. Use for software work and when pseudocode is requested for software logic, data, state, concurrency, lifecycle, or recovery. Do not use for prose-only expression or host-language attachment that makes no software decision.
 license: MIT. See LICENSE.txt for complete terms and notices
 ---
 
@@ -17,6 +17,7 @@ Let software structure grow from the established contract and concrete pressure.
 ## 2. Select the method
 
 Read [implementation](references/implementation.md) when creating or changing topology, introducing an abstraction, refactoring, redesigning, or optimizing. Let structure grow only from the contract and concrete pressure.
+Read [structured IR](references/pseudocode.md) when pseudocode is the requested deliverable or review surface, or when software logic or data evolution must become reviewable before selecting its realization. The reference owns the deliverable, blocking-review, and non-blocking implementation paths.
 
 Read [testing](references/testing.md) when behavior or acceptance evidence changes, or when reviewing test quality. Treat tests as executable design language at observable responsibility boundaries: establish acceptance evidence early enough to constrain implementation, and leave each boundary's replaceable internals unspecified.
 
